@@ -2,7 +2,7 @@
 
 ### Built With React, NextJS, TypeScript, TailwindCSS, Firebase
 
-## Getting Started
+### Getting Started
 
 First, run the development server:
 

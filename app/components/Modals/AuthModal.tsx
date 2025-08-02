@@ -24,7 +24,8 @@ const AuthModal:React.FC<AuthModalProps> = () => {
 						<div className='flex justify-end p-2'>
 							<button
 								type='button'
-								className='bg-transparent  rounded-lg text-sm p-1.5 ml-auto inline-flex items-center hover:bg-gray-800 hover:text-white text-white'>
+								className='bg-transparent  rounded-lg text-sm p-1.5 ml-auto inline-flex items-center hover:bg-gray-800 hover:text-white text-white'
+								onClick={handleClick}>
 								
 							
 								<IoClose className='h-5 w-5'/>
@@ -39,3 +40,7 @@ const AuthModal:React.FC<AuthModalProps> = () => {
     );
 };
 export default AuthModal;
+
+function useCloseModal(){
+	const setAuthModalState = useSetRecoilState(authModalState);
+}
