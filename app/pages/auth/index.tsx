@@ -1,10 +1,13 @@
 import AuthModal from '@/app/components/Modals/AuthModal';
 import Navbar from '@/app/components/Navbar/Navbar';
+import { authModalState } from '@/app/atoms/authModalAtom';     
 import React from 'react';
+import { useRecoilValue } from 'recoil';
 
-type indexProps = {};
+type AuthPageProps = {};
 
-const index:React.FC<indexProps> = () => {
+const AuthPage:React.FC<AuthPageProps> = () => {
+    const authModal = useRecoilValue(authModalState)
     
     return <div className='bg-gradient-to-b from-gray-600 to-black h-screen relative'>
         <div className='max-w-7xl mx-auto'>
@@ -17,4 +20,4 @@ const index:React.FC<indexProps> = () => {
 
     </div>
 }
-export default index;
+export default AuthPage;
